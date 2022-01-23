@@ -9,12 +9,11 @@ public class MessageReceiver {
 
     private static final Logger LOGGER =
             LoggerFactory.getLogger(MessageReceiver.class);
-/*
     private CountDownLatch latch = new CountDownLatch(5);
 
     public CountDownLatch getLatch() {
         return latch;
-    }*/
+    }
 
     @JmsListener(destination = "payers.q")
     public void receive(String message) {
